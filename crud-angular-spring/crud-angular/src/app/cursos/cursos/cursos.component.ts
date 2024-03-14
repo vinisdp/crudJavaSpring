@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { Curso } from '../models/curso';
 
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-cursos',
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule, MatCardModule, MatToolbarModule],
   templateUrl: './cursos.component.html',
   styleUrl: './cursos.component.scss',
 })
