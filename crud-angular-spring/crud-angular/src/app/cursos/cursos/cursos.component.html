@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="card">
   <mat-toolbar color="primary">
     <span>Cursos Disponíveis</span>
   </mat-toolbar>
@@ -21,4 +21,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
+  <mat-spinner></mat-spinner>
 </mat-card>
