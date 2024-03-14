@@ -11,8 +11,8 @@ import { MatTableModule } from '@angular/material/table';
   styleUrl: './cursos.component.scss',
 })
 export class CursosComponent {
-  cursos: Curso[] = [];
-  displayedColumns: any;
+  cursos: Curso[] = [{ id: '1', nome: 'Angular', categoria: 'Front-End' }];
+  displayedColumns = ['nome', 'categoria'];
 
   constructor() {}
   NgOnInit(): void {}
