@@ -4,6 +4,7 @@ import { Curso } from '../models/curso';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { CursosService } from '../services/cursos.service';
 
 @Component({
   selector: 'app-cursos',
@@ -13,9 +14,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrl: './cursos.component.scss',
 })
 export class CursosComponent {
-  cursos: Curso[] = [{ id: '1', nome: 'Angular', categoria: 'Front-End' }];
+  cursos: Curso[] = [];
   displayedColumns = ['nome', 'categoria'];
 
-  constructor() {}
-  NgOnInit(): void {}
+  constructor(private cursosService: CursosService) {}
+  NgOnInit(): void {
+    this.cursos = this.cursosService.list();
+  }
 }
