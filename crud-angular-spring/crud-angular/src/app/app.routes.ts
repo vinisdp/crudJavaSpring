@@ -1,13 +1,11 @@
 import { Routes } from '@angular/router';
-import { CursosComponent } from './cursos/cursos/cursos.component';
 
-export const routes: Routes = [
+export const APP_ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'cursos' },
   {
-    path: 'cursos',
+    path: 'courses',
     loadChildren: () =>
-      import('./cursos/cursos-routing.module').then(
-        (m) => m.CursosRoutingModule
-      ),
+      import('./cursos/cursos.routes').then((m) => m.COURSES_ROUTES),
   },
 ];
+export { Routes };

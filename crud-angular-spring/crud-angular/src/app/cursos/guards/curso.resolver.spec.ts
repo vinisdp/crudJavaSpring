@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CourseResolver } from './course.resolver';
+import { CursoResolver } from './curso.resolver';
 
 describe('CourseResolver', () => {
-  let resolver: CourseResolver;
+  let resolver: CursoResolver;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    resolver = TestBed.inject(CourseResolver);
+    resolver = TestBed.inject(CursoResolver);
   });
 
   it('should be created', () => {
