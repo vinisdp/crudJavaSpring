@@ -6,6 +6,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CursosService } from './cursos/services/cursos.service';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { CategoriaPipe } from './shared/pipes/categoria.pipe';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,5 +16,6 @@ export const appConfig: ApplicationConfig = {
     CursosService,
     importProvidersFrom(HttpClient),
     provideHttpClient(),
+    CategoriaPipe,
   ],
 };

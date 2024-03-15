@@ -13,7 +13,6 @@ export class CursosService {
   list() {
     return this.httpClient.get<Curso[]>(this.API).pipe(
       first(),
-      delay(5000),
       tap((cursos) => console.log(cursos))
     );
   }
